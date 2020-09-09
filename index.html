@@ -7,14 +7,18 @@
     <body>
         <h1>Conversão de números binários</h1>
         <div class="mae">
-            <p>Digite o valor em binário para transformar em binário</p>
-            <input type="text" id="binario" >
-            <button type="submit" onclick="myFunction()">Enviar</button>
-            <p id="resulBinario">Resultado: </p><br><br>
-            <p>Digite o valor em decimal para transformar em binário</p>
-            <input type="text" id="decimal" >
-            <button type="submit" onclick="myFunction2()">Enviar</button>
-            <p id="resultDecimal">Resultado: </p>
+            <div class="div-binario">
+                <p class="text">Digite o valor em binário para transformar em binário</p>
+                <input type="text" id="binario" >
+                <button type="submit" onclick="myFunction()">Enviar</button>
+                <p id="resulBinario" class="text">Resultado: </p><br><br>
+            </div>
+            <div class="div-decimal">
+                <p class="text">Digite o valor em decimal para transformar em binário</p>
+                <input type="text" id="decimal" >
+                <button type="submit" onclick="myFunction2()">Enviar</button>
+                <p id="resultDecimal" class="text">Resultado: </p>
+            </div>
         </div>
     </body>
     <script>
@@ -52,7 +56,8 @@
                     }
                 }
             }
-            console.log(resultado);
+            var resultFinal = document.getElementById("resultDecimal");
+            resultFinal.innerText = "Resultado: " + resultado;
         }
     </script>
 </html>
